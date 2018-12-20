@@ -57,8 +57,8 @@ $(document).ready(function () {
         })
             .then(function (response) {
                 console.log(queryURL);
-
                 console.log(response);
+
                 var results = response.data;
 
                 for (var i = 0; i < results.length; i++) {
@@ -67,50 +67,56 @@ $(document).ready(function () {
                     var topicDiv = $("<div class='gif-div'>");
 
                     // Create image tag to display source GIF image
-                    var topicImage = $("<img class='gif'>");
+                    var topicImageStill = $("<img class='gif'>");
+                    //var topicImageAnimate = $("<img class='gif'>");
 
                     // Create <p> to store GIF rating
                     var p = $("<p>").text("Rating: " + results[i].rating);
 
-                    // Set image source to img tag
-                    topicImage.attr("src", results[i].images.fixed_height.url);
+                    // Set animated image source to img tag
+                    //topicImageAnimate.attr("src", results[i].images.fixed_height.url);
 
+                    // Set still image source
+                    topicImageStill.attr("src", results[i].images.fixed_height_still.url);
 
                     // Append <p> and <img> to topicDiv <div>
-                    topicDiv.append(topicImage);
+                    topicDiv.append(topicImageStill);
                     topicDiv.append(p);
 
                     // Prepend topicDiv to "gifs-view" <div>
                     $("#gifs-view").prepend(topicDiv);
+                    //$(".gif").on("click", function () {
+                        // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+                      //  var state = $(this).attr("data-state");
+
+
+                        // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+                        // Then, set the image's data-state to animate
+                        // Else set src to the data-still value
+                        /*
+                        if (state === "still") {
+                            $(this).attr("src", $(this).attr("data-animate"));
+                            $(this).attr("data-state", "animate");
+                        } else {
+                            $(this).attr("src", $(this).attr("data-still"));
+                            $(this).attr("data-state", "still");
+                        }
+                        */
+                    //})
 
                 }
             });
-        /*$(".gif").on("click", function () {
-            // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-            var state = $(this).attr("data-state");
-            // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-            // Then, set the image's data-state to animate
-            // Else set src to the data-still value
-            if (state === "still") {
-                $(this).attr("src", $(this).attr("data-animate"));
-                $(this).attr("data-state", "animate");
-            } else {
-                $(this).attr("src", $(this).attr("data-still"));
-                $(this).attr("data-state", "still");
-            }
-        })*/
     }
     //clears existing gifs from the #gifs-view div
-   function clearGifs(){
+    function clearGifs() {
         $("#gifs-view").empty();
     }
 
     //Call clearGif function
-    $(document).on("click",".topic-btn", clearGifs);
+    $(document).on("click", ".topic-btn", clearGifs);
 
     //Call displayGif function
     $(document).on("click", ".topic-btn", displayGifs);
-
 
     //Call renderButtons function
     renderButtons();
