@@ -1,0 +1,112 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    background: #111;
+    background-image: url('../images/ep_naturalblack.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+#fixed-header {
+    max-width: 100%;
+    position: fixed;
+    background: #111;
+    background-image: url('../images/ep_naturalblack.png');
+    background-repeat: repeat;
+    opacity: .9;
+    padding: 30px;
+    z-index: 2;
+}
+
+#header-text {
+    margin: auto;
+    text-align: center;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+h1 {
+    color: rgb(248, 248, 248);
+    font-weight: 700;
+    font-size: 100px;
+}
+
+#topic-button-box {
+    margin: auto;
+    text-align: center;
+}
+
+.topic-btn {
+    margin: 5px 5px 20px 5px;
+    background-color: rgb(255, 208, 55);
+    font-size: 14px;
+    color: rgb(46, 46, 46);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#topic-form-box {
+    margin: auto;
+    text-align: center;
+}
+
+#add-topic-btn {
+    background-color: rgb(255, 208, 55);
+    font-size: 14px;
+    color: rgb(46, 46, 46);
+    font-weight: 700;
+    border: none;
+    margin: 5px 0px 0px 0px;
+    padding: 3px 10px 3px 10px;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#topic-input {
+    background-color: rgb(248, 248, 248);
+    font-size: 14px;
+    color: rgb(46, 46, 46);
+    font-weight: 700;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 5px 0px 0px 0px;
+    padding: 3px 10px 3px 10px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#gif-display{
+    width: 100%;
+    z-index: 0;
+    padding-top: 300px;
+}
+
+#gifs-view {
+    margin: auto;
+    max-width: 960px;
+    padding: 30px
+}
+
+.gif-div {
+    float: left;
+    text-align: left;
+    margin-right: 30px;
+    color: rgb(255, 208, 55);
+    font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 72px;
+    }
+
+    .gif-div {
+        float: none;
+        text-align: center;
+        margin-right: 30px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GIF-a-tron!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!---SCRIPTS--->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+
+    <!---STYLES--->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700" rel="stylesheet">
+</head>
+
+<body>
+    <!----FIXED HEADER--->
+    <div class="container" id="fixed-header">
+        <div class="row">
+            <div class="col" id="header-text">
+                <h1>GIF-a-tron!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="topic-button-box">
+                <div id="topics-view">
+                    <!--buttons appear here-->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="topic-form-box">
+                <form id="topic-form">
+                    <input type="text" id="topic-input" placeholder="Type an action here!">
+                    <!-- Button triggers new action button to be added -->
+                    <input id="add-topic-btn" type="submit" value="Go!">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="gif-display">
+        <div class="row">
+            <div class="col" id="gifs-view">
+                <!---gifs appear here-->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
