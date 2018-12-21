@@ -1,1 +1,2 @@
 # GifTastic
+This web page will display GIF images of a specific topic at the press of a button. There will be preloaded buttons at the top, but the user can input a topic and hit the search button. This button will add a topic button to the existing group of topic buttons. The user can then click that new topic button to populate related GIFs. Only GIFs of that topic will be displayed. Once a new topic button is clicked, the existing GIFs on the page will be replaced with the new ones. 
