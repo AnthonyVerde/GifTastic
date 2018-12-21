@@ -77,7 +77,7 @@ $(document).ready(function () {
                     //topicImageAnimate.attr("src", results[i].images.fixed_height.url);
 
                     // Set still image source
-                    topicImageStill.attr("src", results[i].images.fixed_height_still.url);
+                    topicImageStill.attr("src", results[i].images.fixed_height.url);
 
                     // Append <p> and <img> to topicDiv <div>
                     topicDiv.append(topicImageStill);
@@ -85,6 +85,14 @@ $(document).ready(function () {
 
                     // Prepend topicDiv to "gifs-view" <div>
                     $("#gifs-view").prepend(topicDiv);
+
+                    /*$(function(){
+                    var topicImageStill = new Image();
+                    topicImageStill.src="results[i].images.fixed_height.url";
+                        $(".gif").click(function(){
+                            $(this).attr("src",topicImageStill.src)
+                        })
+                    })*/
                     //$(".gif").on("click", function () {
                         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
                       //  var state = $(this).attr("data-state");
@@ -102,6 +110,7 @@ $(document).ready(function () {
                             $(this).attr("data-state", "still");
                         }
                         */
+                       
                     //})
 
                 }
